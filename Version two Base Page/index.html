@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>project</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <main class="main-content">
+      <!--Top navigation bar-->
+      <section class="header-section">
+        <header class="header">
+          <div class="topnav-left">
+            <div>
+                <a href="Home"><img src="./logo/logo.png" alt=""></a>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Topics <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Math</a>
+                <a href="#">GK</a>
+                <a href="#">Hobbies</a>
+                <a href="#">BodyParts</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn"> Contest </button>
+              <div class="dropdown-content">
+                <a href="#">Launch On 15 July</a>
+              </div>
+            </div>
+          </div>
+          <div class="topnav-right">  
+              <!-- Login -->
+              <div class="login">
+                <button onclick="onSignIn()">Login</button>
+              </div>
+
+          </div>
+          <div class="overlay-containers">
+            <div id="overlaySignIn">
+              <div class="popup">
+                <div class="close-btn" onclick="offSignIn()">&times;</div>
+                <div id="form">
+                    <h2>Sign In</h2>
+                    <div class="form-element">
+                      <input type="text" id="email" placeholder="Enter your email">
+                  </div>
+                    <div class="form-element">
+                        <input type="password" id="password" placeholder="Enter your password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+                    </div>
+                    <button>Sign In</button>
+                    <div class="need-help-section">
+                      <div class="checkbox-element">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    </div>
+                    <div class="signUp-intro">
+                      <p>Don't have an account? <a href="./signUp/signUp.html"><b>Sign up now.</b></a></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </header>
+      </section>
+      <!---content of the page-->
+      <section class="page-content-section">
+        <!-- Search Box -->
+        <div class="box">
+          <label name="search">
+              <input type="text" class="input" name="txt" 
+              placeholder="Search here">
+              <button type="submit" class="search-button" value="search">Search</button>
+          </label>
+        </div>
+      </section>
+      
+      <!--Footer of the page-->
+
+      
+      <!-- Used a container Try to Practice this -->
+      <div class="container">
+        <footer>
+          <section class="ft-main">
+            <div class="ft-main-item">
+              <h2 class="ft-title">About</h2>
+              <ul>
+                <li><a href="#">Our Projects</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Resources</h2>
+              <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">eBooks</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Support</h2>
+              <ul>
+                <li><a href="#">Support Request</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Stay Updated</h2>
+              <p>Subscribe to our newsletter to get our latest news.</p>
+              <form>
+                <input type="email" name="email" placeholder="Enter email address"/>
+                <input type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </section>
+
+          <!-- Footer legal -->
+          <section class="ft-legal">
+            <ul class="ft-legal-list">
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li>&copy; 2022 Copyright</li>
+            </ul>
+          </section>
+        </footer>
+      </div>
+    </main>
+    <script>
+      function onSignIn() {
+        document.getElementById("overlaySignIn").style.display = "block";
+      }
+      
+      function offSignIn() {
+        document.getElementById("overlaySignIn").style.display = "none";
+      }
+      </script>
+  </body>
+</html>

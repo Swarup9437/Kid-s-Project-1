@@ -1,0 +1,311 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+img {
+  height: 80px;
+  width: 80px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #ffc94b;
+  
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  padding: 0px 150px;
+  width: 75%;
+  color: white;
+  gap: 7.5rem;
+}
+
+.dropdown .dropdown-btn {
+  font-size: 20px;  
+  border: none;
+  color: white;
+  padding: 5px;
+  background-color: inherit;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: rgb(65, 150, 235);
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown .dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-right {
+  width: 25%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 5%;
+}
+
+/* search start*/
+.search-btn {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: inherit;
+  color: white;
+}
+
+.bg-search-modal {
+  width: 90%;
+  height: 90%;
+  background-color: rgb(63, 54, 54);
+  opacity: 0.9;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.search-modal {
+  width: 600px;
+  height: 700px;
+  background-image: url(./board.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-modal input {
+  margin-top: 70%;
+  width: 350px;
+  height: 80px;
+  border-radius: 15px;
+  background-color: none;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.search-modal .search-btn {
+  background-color: #9b633b;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.search-modal .search-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#close-btn {
+  position: absolute;
+  font-size: 2rem;
+  top: 5%;
+  left: 95%;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+/*Search end*/
+
+
+
+
+/* Main Container */
+.main-container {
+  background-image: url(https://img.freepik.com/free-photo/cheerful-student-writing-holding-books_1098-3439.jpg?size=626&ext=jpg&ga=GA1.2.1503742435.1652435681);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.tagline {
+  margin-top: 8rem;
+  margin-left: 3rem;
+  color: white;
+}
+
+.tagline h1 {
+  font-size: 3rem;
+}
+.tagline h3 {
+  font-size: 2rem;
+}
+
+/* Main Container End */
+
+
+/* Footer */
+
+footer {
+  background-color: #660746;
+  color: #bbb;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+/* Sticks footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+/* Footer main | Newsletter form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+input[type="email"] {
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+input[type="submit"] {
+  background-color: #00d188;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+}
+/* Footer legal */
+.ft-legal {
+  padding: 0.6rem 1.875rem;
+  background-color: #333;
+}
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+
+/* Media */
+
+
+#hamburger-menu {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 25px;
+}
+
+.line {
+  width: 33px;
+  background-color: white;
+  margin: 5px 3px;
+  height: 4px;
+}
+
+@media screen and (max-width: 1050px){ 
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-left {
+    flex-direction: column;
+    gap: .1rem;
+
+  }
+  .navbar-right {
+    text-align: center;
+    margin: 0px;
+  } 
+  #hamburger-menu {
+    display: block;
+  }
+
+  .navbar-left {
+    display: none;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .navbar-left.active {
+    display: flex;
+  }
+  .navbar-right.active {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Practice</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">  
+        <!-- Left Navbar With 3 Items.  All are in div tag -->
+        
+        <div class="navbar-left">            
+          <div class="logo"><a href="#"><img src="logo.png" alt="Logo"></a></div>
+          <div class="dropdown ">
+            <button class="dropdown-btn">Topics <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Math</a>
+              <a href="#">GK</a>
+              <a href="#">Hobbies</a>
+              <a href="#">BodyParts</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn"> Contest </button>
+            <div class="dropdown-content">
+              <a href="#">Launch On 15 July</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Navbar With only One Items i.e Login -->
+
+        <div class="navbar-right">
+          <button id = "search-btn" class="search-btn">Search</button>                
+        </div>
+        
+        
+        <!-- For Search Modal -->
+        <div class="bg-search-modal">
+          <div id="close-btn">&times;</div>
+          <div class="search-modal">
+            <input type="text" placeholder="Search">
+            <br>
+            <div>
+              <button class = "search-btn"><a href="#" target="_blank">Search</a></button>
+            </div>
+             
+          </div>
+                                  
+        </div>
+
+
+        <!-- Hamburger Menu -->
+        <div id ="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="tagline">
+          <h3>Let us help you</h3>
+          <h1>LEARN | EXPLORE | GROW</h1>
+      </div>
+  </main>
+
+    <footer>
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">About</h2>
+          <ul>
+            <li><a href="#">Our Projects</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Resources</h2>
+          <ul>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">eBooks</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Support</h2>
+          <ul>
+            <li><a href="#">Support Request</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Stay Updated</h2>
+          <p>Subscribe to our newsletter to get our latest news.</p>
+          <form>
+            <input type="email" name="email" placeholder="Enter email address"/>
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li>&copy; 2022 Copyright</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script>
+      document.getElementById('search-btn').addEventListener('click', function () {
+        document.querySelector('.bg-search-modal').style.display = 'flex';
+      });
+      document.getElementById('close-btn').addEventListener('click', function () {
+        document.querySelector('.bg-search-modal').style.display = 'none';
+      });
+    </script> 
+    <script>
+      const hamburger = document.getElementById('hamburger-menu');
+      const leftnavbar = document.getElementsByClassName('navbar-left')[0];
+      const rightnavbar = document.getElementsByClassName('navbar-right')[0];
+      hamburger.addEventListener('click', () => {
+        leftnavbar.classList.toggle('active');
+        rightnavbar.classList.toggle('active');
+      })
+    </script>
+
+
+  </body>
+</html>
